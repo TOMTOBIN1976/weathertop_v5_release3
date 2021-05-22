@@ -1,0 +1,40 @@
+#{extends 'main.html' /}
+#{set title:'Dashboard' /}
+
+#{menu id:"dashboard"/}
+
+<! COMMENT: looping through each stationlist in the array. Header for each entry  -->
+#{list items:station, as:'station'}
+<section class="ui segment">
+  <h2 class="ui header">
+    ${station.name}<br>
+  </h2>
+  <p></p>
+  <a href="/station/${station.id}" class="ui icon button">
+    <i class="icon folder open"></i>
+  </a>
+  <a href="/station/deletestation/${station.id}" class="ui icon button">
+    <i class="red icon trash"></i>
+  </a>
+
+</section>
+#{/list}
+
+<! COMMENT: link to partial  -->
+#{addstation /}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

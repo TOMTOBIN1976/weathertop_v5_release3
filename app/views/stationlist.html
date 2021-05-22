@@ -1,0 +1,78 @@
+#{extends 'main.html' /}
+#{set title:'Stationlist' /}
+
+#{menu id:"dashboard"/}
+
+<div class="ui five stackable cards">
+  <div class="ui inverted card">
+    <div class="content">
+      <div class="description">
+        <i class="huge right floated egg icon"></i>
+        ${station.name}<br>
+        Lat: ${stationlatitude}<br>
+        Lng: ${stationlongitude}<br>
+      </div>
+    </div>
+  </div>
+  <div class="ui inverted card">
+    <div class="content">
+      <div class="description">
+        <i class="huge right floated ${weatherCodeIcon}"></i>
+        <p>Weather:</p>
+        ${lastWeathercode}<br>
+        ${weatherCondition}<br>
+      </div>
+    </div>
+  </div>
+  <div class="ui inverted card">
+    <div class="content">
+      <div class="description">
+        <i class="huge right floated  blue temperature low icon"></i>
+        <p>Temp:</p>
+        ${lastReadingTemperature} C<br>
+        ${fahrenheitTemperature}F<br>
+        Min:${minimumReadingTemperature}<br>
+        Max:${maximumReadingTemperature}<br>
+        Trend:${temperatureTrend}<br>
+
+      </div>
+    </div>
+  </div>
+  <div class="ui inverted card">
+    <div class="content">
+      <div class="description">
+        <i class="huge right floated green wind icon"></i>
+        <p>Wind:</p>
+        ${lastReadingWind}km/h<br>
+        ${windBeaufort}bft<br>
+        ${windDirectionCompass}<br>
+        Feels like<br>
+        ${lastReadingWindChill}<br>
+        Max:${maximumWindSpeed}<br>
+        Min:${minimumWindSpeed}<br>
+      </div>
+    </div>
+  </div>
+  <div class="ui inverted card">
+    <div class="content">
+      <div class="description">
+        <i class="huge right floated orange atom icon"></i>
+        <p>Pressure:</p>
+        ${lastReadingPressure}<br>
+        Max:${maximumReadingPressure}<br>
+        Min:${minimumReadingPressure}<br>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<section class="ui segment">
+  <h2 class="ui header">
+    ${station.name}
+  </h2>
+  #{listreadings station:station /}
+  #{addreading station:station /}
+</section>
+
+

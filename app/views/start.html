@@ -1,0 +1,80 @@
+#{extends 'main.html' /}
+#{set title:'About' /}
+
+#{welcomemenu id:"start"/}
+<!--#{welcomemenu id:"start"/}-->
+<!--#{menu id:"start"/}}-->
+<main>
+  <article class="ui basic segment">
+    <div class="ui grid">
+      <div class="ui twelve wide column">
+        <p>
+          Welecome to WeatherTop Inc. web application for weather station WeatherTop 1000. This site servers a
+          companion application for the device.
+          vice takes a set of meteorological readings and displays these on a simple LCD
+          display. Our new <a href="/dashboard">web application</a> is a Web companion application for the
+          device.
+          Access your weather data anywhere, anytime, on any connected device.
+        </p>
+        <h2>Connect to the WeatherTop Network</h2>
+        <p>Your Own Weather Server to keep private or share with friends and family. Send real time data to
+          WeatherTop.net.
+          Our mobile friendly and responsive design allows you to analyze your readings.
+          WeatherTop ensures contributors can do more than simply measure the weather,
+          so we created the most connected platform in the industry.
+          Quickly view detailed information with our animated expandable modules.
+          Monitor indoor and outdoor conditions, including wind speed, wind direction, rainfall, temperature,
+          wind chill and more.
+          Features dials, gauges, graphs and text reports for every parameter.
+        </p>
+        <h2>Outputs</h2>
+        <img src="../../public/images/latestWeatherPanel.png"/>
+        <p>
+          The dashboard for <a href="/dashboard">application</a> produces the following outputs
+        <ul>
+          <li>Station Name</li>
+          <li>Weather conditions - code presented as a description</li>
+          <li>Temp in both C & F</li>
+          <li>Wind in Beaufort</li>
+          <li>Pressure</li>
+          <li>Wind Direction</li>
+          <li>Location of Station</li>
+          <li>Current Weather Icon</li>
+          <li>Maximum and minimum readings</li>
+          <li>Trends</li>
+        </ul>
+        </p>
+        <h3>User Accounts System</h3>
+        <img src="../../public/images/signup.png" height="285" width="857"/>
+        <p>
+          By accessing the WeatherTop application with your user account, your associated stations and
+          readings
+          are always avaiable to you.<br>
+          If you have not already, please <a href="/dashboard">signup</a>
+          <img src="../../public/images/weathertop1000.png" alt="weathertop1000" class="ui image">
+        <h2>Free Features</h2>
+        <p> As a purchaser of our weather station you are entilted to free use of the WeatherTop
+          application.This allows full access to all reading and data via any web browser.
+          Just signup now.
+        </p>
+        <div class="ui circular inverted blue segment">
+          <ul class="ui list">
+            <div class="item">Weather Forecast displays Sunny, Partially Cloudy, Cloudy, Rainy, Stormy, or
+              Snowy condition
+            </div>
+            <div class="item"> Barometric pressure in Relative or Absolute readings</div>
+            <div class="item">Displays Rain Rate, Daily, Weekly, Monthly and Total Rainfall measurement (in
+              inches or millimeters)
+            </div>
+            <div class="item">COMING SOON ! Historical bar chart display for rainfall (past 5 days) or
+              pressure changes (1, 3, 6, 12, 24 hours)
+            </div>
+          </ul>
+        </div>
+
+      </div>
+      <div class="ui four wide column">
+        #{aside /}
+      </div>
+  </article>
+</main>
